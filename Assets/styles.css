@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    padding-top: 0px;
+    color: black;
+  }
+
+body {
+    background-color: thistle;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100vh;
+    height: 100 vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 500px;
+    max-width: 80%;
+
+}
+
+.btn {
+    background-color: turquoise;
+    border: 1px solid;
+
+}
+
+.start-button {
+    background-color: teal;
+}
