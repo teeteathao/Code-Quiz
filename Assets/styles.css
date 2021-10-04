@@ -23,6 +23,8 @@ body {
     padding: 10px;
 }
 
+
+/* Questions and answers */
 h1{
     text-align: center;
 }
@@ -32,12 +34,19 @@ ul{
     padding: 0;
     text-align: center;
 }
+
+ul li{
+    font-size: 15px;
+    margin: 5px;
+
+}
+
 /* Start Button */
 .btn {
     background-color: turquoise;
     border: 1px solid;
 }
 
-.start-button {
+.buttons {
     background-color: teal;
 }
