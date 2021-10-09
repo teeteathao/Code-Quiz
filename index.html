@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assets/styles.css"/>
-    <title>JavaScript Fundamentals Quiz</title>
+    <title>JavaScript Quiz</title>
 </head>
 
 <body>
@@ -19,11 +19,17 @@
         <button id="startBtn" class="btn">Start Quiz</button>
         </div>
 
-        <div class="buttons">
-           
-            <button id="submitBtn" class="btn">Submit</button>
+        <div class="questions" class="hide">
+           <h2 id=questions-title></h2>
+           <div class="choices"></div>
         </div> 
         
+        <!-- <div id="endQuiz" class="hide">
+            <h2>Time's Up!</h2>
+            <p>Your Final Score Is <span id="final-score"></span></p>
+            <p>Enter Initials: <input type="text" id="initials" max="2"/>
+            <button id="submitBtn">Submit</button></p>
+        </div> -->
         <div class="timer">Time: <span id="time">0</span></div>
    
         </div>

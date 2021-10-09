@@ -61,17 +61,31 @@ function endQuiz(){
 function getQuestion(){
     // declare index 0 
     // create var to title on the page
+    var title= document.getElementById("question");
+    var currentQuestion = questions;
+    title.textContent = currentQuestion.title;
     // loop (for each) over choices, create dynamic button using js
+    var choicesPick = document.createElement("button");
+    choicesPick.setAttribute("class","choices");
+    choicesPick.setAttribute("value", "choices");
     // creat onclick event question click
+    choices.onClick = questionClick
     // display to page
+    choices.appenChild();
 }
 
 function questionClick(){
-    // condition if answer is correct/incorrect
-    // if incorrect subtract time
-    // display new time on page
-    // move to next question
-}
+//     // condition if answer is correct/incorrect
+//     if(this.value !== questions[])
+//     // if incorrect subtract time
+//     time-=10;
+//     if(time<0){
+//         time=0
+//     }
+//     // display new time on page
+//     timer.textContent = time;
+//     // move to next question
+// }
 
 function saveHighScore(){
     // local storage
