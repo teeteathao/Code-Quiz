@@ -34,12 +34,12 @@ const questions = [{
 ]
 // Add event listener to buttons
 startButton.addEventListener("click", startQuiz);
-submitButton.addEventListener("click", submitAnswer);
+// submitButton.addEventListener("click", submitAnswer);
 
 
 // Start quiz
 function startQuiz(){
-    // console.log("start")
+    console.log("start")
     timerId = setInterval(timer, 1000);
 }
 
@@ -85,7 +85,7 @@ function questionClick(){
 //     // display new time on page
 //     timer.textContent = time;
 //     // move to next question
-// }
+}
 
 function saveHighScore(){
     // local storage
