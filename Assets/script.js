@@ -50,7 +50,7 @@ startButton.addEventListener("click", startQuiz);
 function startQuiz(){
     console.log("start")
     timerId = setInterval(timer, 1000);
-    
+    // startBtn.setAttribute("class", "hide");
     getQuestion();
     // console.log(getQuestion)
 }
@@ -78,16 +78,19 @@ function getQuestion(){
     var titleEl = document.getElementById("questions-title");
     titleEl.textContent = currentQuestion.title;
     choicesEl.innerHTML = "";
-    console.log(titleEl)
-    // // // loop (for each) over choices, create dynamic button using js
-    // var choicesPick = document.createElement("button");
-    // choicesPick.setAttribute("class","choices");
-    // choicesPick.setAttribute("value", "choices");
-
-    // // creat onclick event question click
-    // choices.onClick = questionClick
-    //  // display to page
-    // choices.appendChild(choicesPick);
+    // console.log(titleEl)
+    // loop (for each) over choices, create dynamic button using js
+    currentQuestion.choices.forEach(function(choices, i){
+        var choicePick = document.createElement("button");
+        choicePick.setAttribute("class", "choice");
+        choicePick.setAttribute("value", choicesEl);
+        choicePick.textContent = i + 1 + ". " + choicesEl;
+        choicePick.onclick = questionClick;
+    // creat onclick event question click
+    choicePick.onClick = questionClick;
+     // display to page
+    choicesEl.appendChild(choicePick);
+    })
 }
 
 function questionClick(){
