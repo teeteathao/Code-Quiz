@@ -29,16 +29,8 @@ h1{
     text-align: center;
 }
 
-ul{
-    list-style: none;
-    padding: 0;
+p{
     text-align: center;
-}
-
-ul li{
-    font-size: 15px;
-    margin: 5px;
-
 }
 
 /* Start Button */
