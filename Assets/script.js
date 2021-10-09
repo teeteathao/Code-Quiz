@@ -1,7 +1,8 @@
 //Variables
 var startButton = document.getElementById("startBtn");
-var submitButton = document.getElementById("submitBtn");
-var time = document.getElementById("time")
+var time = document.getElementById("time");
+var currentQuestionIndex = 0;
+var choicesEl = document.getElementById("choices");
 
 var timerId;
 var timerCountdown = 30;
@@ -33,16 +34,25 @@ const questions = [{
     choices: ["Else", "Then", "If", "Start"],
     answer: "If",
 },
-]
+];
+// const quizQuestion = questions[4];
+// const questionTitle = questions.title;
+
+// console.log(questionTitle)
+// console.log(quizQuestion)
+// console.log(questions)
+
 // Add event listener to buttons
 startButton.addEventListener("click", startQuiz);
-// submitButton.addEventListener("click", submitAnswer);
 
 
 // Start quiz
 function startQuiz(){
     console.log("start")
     timerId = setInterval(timer, 1000);
+    
+    getQuestion();
+    // console.log(getQuestion)
 }
 
 //timer starts when user pushes start
@@ -52,7 +62,7 @@ function timer(){
     // console.log(timerCountdown)
     if (timerCountdown <= 0){
         endQuiz();
-    }
+    }    
 }
 
 //end quiz when the timer reaches 0
@@ -62,22 +72,22 @@ function endQuiz(){
 
 function getQuestion(){
     // declare index 0  
-    getQuestion(questions[0])
-        let titleQuestion = document.getElementById("title");
-        titleQuestion.textContent = questions.titleQuestion;
-    console.log(getQuestion)
-    // // create var to title on the page
-    // var title= document.getElementById("question");
-    // var currentQuestion = questions;
-    // title.textContent = currentQuestion.title;
+    var currentQuestion = questions[currentQuestionIndex];
+    console.log(currentQuestion)
+    // create var to title on the page
+    var titleEl = document.getElementById("questions-title");
+    titleEl.textContent = currentQuestion.title;
+    choicesEl.innerHTML = "";
+    console.log(titleEl)
     // // // loop (for each) over choices, create dynamic button using js
     // var choicesPick = document.createElement("button");
     // choicesPick.setAttribute("class","choices");
     // choicesPick.setAttribute("value", "choices");
-    // // // creat onclick event question click
+
+    // // creat onclick event question click
     // choices.onClick = questionClick
-    // // // display to page
-    // choices.appenChild(choicesPick);
+    //  // display to page
+    // choices.appendChild(choicesPick);
 }
 
 function questionClick(){
