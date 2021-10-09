@@ -63,17 +63,17 @@ function endQuiz(){
 function getQuestion(){
     // declare index 0 
     // create var to title on the page
-    // var title= document.getElementById("question");
-    // var currentQuestion = questions;
-    // title.textContent = currentQuestion.title;
+    var title= document.getElementById("question");
+    var currentQuestion = questions;
+    title.textContent = currentQuestion.title;
     // // loop (for each) over choices, create dynamic button using js
-    // var choicesPick = document.createElement("button");
-    // choicesPick.setAttribute("class","choices");
-    // choicesPick.setAttribute("value", "choices");
+    var choicesPick = document.createElement("button");
+    choicesPick.setAttribute("class","choices");
+    choicesPick.setAttribute("value", "choices");
     // // creat onclick event question click
-    // choices.onClick = questionClick
+    choices.onClick = questionClick
     // // display to page
-    // choices.appenChild();
+    choices.appenChild(choicesPick);
 }
 
 function questionClick(){
