@@ -83,11 +83,20 @@ function getQuestion(){
         buttons.textContent = currentQuestion.choices[i];
         choicesEl.append(buttons);
     }
+        }
+
+function checkAnswer(){
+    // condition if answer is correct/incorrect
+    var checkAnswer = document.getElementById("answer");
+    if (checkAnswer.addEventListener) {
+    button.addEventListener("click", checkAnswer);
+    } else if (checkAnswer.attachEvent) {
+     checkAnswer.attachEvent("onclick", myFunction);
+     
+     console.log(checkAnswer)
     }
 
-function questionClick(){
-//     // condition if answer is correct/incorrect
-//     if(this.value !== questions[])
+}
 //     // if incorrect subtract time
 //     time-=10;
 //     if(time<0){
@@ -96,7 +105,7 @@ function questionClick(){
 //     // display new time on page
 //     timer.textContent = time;
 //     // move to next question
-}
+
 
 function saveHighScore(){
     // local storage
