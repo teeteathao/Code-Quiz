@@ -73,25 +73,17 @@ function endQuiz(){
 function getQuestion(){
     // declare index 0  
     var currentQuestion = questions[currentQuestionIndex];
-    console.log(currentQuestion)
+    console.log("current question is: ",currentQuestion)
     // create var to title on the page
     var titleEl = document.getElementById("questions-title");
     titleEl.textContent = currentQuestion.title;
     choicesEl.innerHTML = "";
-    // console.log(titleEl)
-    // loop (for each) over choices, create dynamic button using js
-    currentQuestion.choices.forEach(function(choices, i){
-        var choicePick = document.createElement("button");
-        choicePick.setAttribute("class", "choice");
-        choicePick.setAttribute("value", choicesEl);
-        choicePick.textContent = i + 1 + ". " + choicesEl;
-        choicePick.onclick = questionClick;
-    // creat onclick event question click
-    choicePick.onClick = questionClick;
-     // display to page
-    choicesEl.appendChild(choicePick);
-    })
-}
+    for (let i = 0; i < currentQuestion.choices.length; i++) {
+        let buttons = document.createElement('button')
+        buttons.textContent = currentQuestion.choices[i];
+        choicesEl.append(buttons);
+    }
+    }
 
 function questionClick(){
 //     // condition if answer is correct/incorrect
